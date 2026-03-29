@@ -1,1 +1,20 @@
+Szymon:
+System umożliwia reset hasła poprzez wysłanie linku na e-mail.
+Wolontariusz może zapisać się na wydarzenie.
+System wysyła e-mail potwierdzający zapis na wydarzenie.
+System wysyła link do potwierdzenia obecności (check-in).
+Wolontariusz potwierdza obecność poprzez link.
+System eksportuje dane do pliku CSV.
+Wolontariusz może przeglądać historię swoich wydarzeń.
+System pokazuje statystyki aktywności użytkowników i wydarzeń.
 
+Gaba:
+
+
+
+
+
+
+
+
+Damian:
