@@ -7,7 +7,7 @@ _Ułatwienie organizacji wydarzeń społecznych i wspieranie wolontariuszy na te
 ---
 
 ## 1. Zespół projektowy i odpowiedzialności
-- **Kierownik projektu:** ~~Szymon Chmielewski~~ Mikołaj Łukasiewicz 
+- **Kierownik projektu:** ~~Szymon Chmielewski~~ Mikołaj Łukasiewicz
   Odpowiedzialność: plan prac, podział zadań, kontrola realizacji harmonogramu, przygotowanie prezentacji końcowej.
 - **Analityk systemowy:** Damian Abramczuk  
   Odpowiedzialność: analiza wymagań, user stories, kryteria akceptacji, spójność dokumentacji funkcjonalnej.
