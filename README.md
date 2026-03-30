@@ -163,9 +163,9 @@ Zadanie jest ukończone, jeśli:
 ## 13. Akceptacja projektu
 **Zatwierdza:**  
 Prowadzący: ..............................................  
-Kierownik projektu: **Szymon Chmielewski**
+Kierownik projektu: **Mikołaj Łukasiewicz**
 
 ---
 
 📅 _Grupa projektowa nr 6 – Lublin, 2026
-_Wersja dokumentu: 1.1_
+_Wersja dokumentu: 1.2_
