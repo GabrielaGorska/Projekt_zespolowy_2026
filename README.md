@@ -11,7 +11,7 @@ _Ułatwienie organizacji wydarzeń społecznych i wspieranie wolontariuszy na te
   Odpowiedzialność: plan prac, podział zadań, kontrola realizacji harmonogramu, przygotowanie prezentacji końcowej.
 - **Analityk systemowy:** Damian Abramczuk  
   Odpowiedzialność: analiza wymagań, user stories, kryteria akceptacji, spójność dokumentacji funkcjonalnej.
-- **Programista backend/frontend:** ~~Szymon Chmielewski~~, Damian Abramczuk  
+- **Programista backend/frontend:** ~~Szymon Chmielewski~~, Damian Abramczuk, Beata Podgórska  
   Odpowiedzialność: implementacja API oraz interfejsu użytkownika, integracja FE–BE, utrzymanie jakości kodu.
 - **UI/UX Designer:** Gabriela Górska  
   Odpowiedzialność: makiety i prototyp w Figma, spójność UI, ergonomia widoków i formularzy.
