@@ -1,4 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, HTTPException
+from sqlalchemy.orm import Session
+from sqlalchemy import text
+from database.connections import get_db
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
@@ -16,6 +19,18 @@ app.add_middleware(
 )
 
 
-@app.get("/health", tags=["Health"])
-def health_check():
-    return {"status": "ok"}
+@app.get("/db-test", tags=["Debug"])
+def test_db_connection(db: Session = Depends(get_db)):
+    """
+    Test endpoint to verify database connectivity.
+    """
+    try:
+        # Execute a simple SQL query to check connection
+        db.execute(text("SELECT 1"))
+        return {"status": "success", "message": "success"}
+    except Exception as e:
+        # If connection fails, return 500 error with details
+        raise HTTPException(
+            status_code=500,
+            detail=f"Database connection failed: {str(e)}"
+        )
