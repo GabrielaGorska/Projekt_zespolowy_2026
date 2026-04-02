@@ -1,8 +1,12 @@
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import text
-from database.connections import get_db
-from fastapi.middleware.cors import CORSMiddleware
+
+from database.connections import get_db, Base, engine
+from routers import auth, admin
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="LSWIS API",
@@ -34,3 +38,7 @@ def test_db_connection(db: Session = Depends(get_db)):
             status_code=500,
             detail=f"Database connection failed: {str(e)}"
         )
+
+
+app.include_router(auth.router)
+app.include_router(admin.router)
