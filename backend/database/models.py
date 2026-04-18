@@ -1,4 +1,5 @@
 import enum
+
 from sqlalchemy import Column, Integer, String, Boolean, Enum
 from .connections import Base
 

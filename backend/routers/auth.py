@@ -4,9 +4,8 @@ from sqlalchemy.orm import Session
 from database import models, schemas, connections
 from utils import auth
 
-
-
 router = APIRouter(prefix="/auth", tags=["Authentication"])
+
 
 @router.post("/register/volunteer", response_model=schemas.UserOut)
 def register_volunteer(user_data: schemas.VolunteerCreate, db: Session = Depends(connections.get_db)):

@@ -49,6 +49,43 @@ def get_current_admin(
     return user
 
 
+@router.patch("/approve-organization/{user_id}", response_model=schemas.UserOut)
+def approve_organization(
+    user_id: int,
+    db: Session = Depends(connections.get_db),
+    current_admin: models.User = Depends(get_current_admin)
+):
+    """
+    Approves an organization account. 
+    Requires administrator privileges.
+    """
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found.")
+
+    # verify the role
+    if user.role != models.UserRole.ORGANIZATION:
+        raise HTTPException(
+            status_code=400,
+            detail="Only accounts with the ORGANIZATION role can be approved via this endpoint."
+        )
+
+    # Prevent redundant database operations if already approved
+    if user.is_approved:
+        raise HTTPException(
+            status_code=400,
+            detail="This organization has already been approved."
+        )
+
+    user.is_approved = True
+
+    db.commit()
+    db.refresh(user)
+
+    return user
+
+
 @router.patch("/promote/{user_id}", response_model=schemas.UserOut)
 def promote_to_admin(user_id: int,
                      db: Session = Depends(connections.get_db),
