@@ -1,6 +1,6 @@
 # LSWIS – Technologie i narzędzia projektu (Tech Stack) w planowanym projekcie
 
-Wersja: 1.0 | Data: 2026
+Wersja: 2.0 | Data: 2026
 
 ---
 
@@ -21,22 +21,23 @@ System LSWIS jest aplikacją webową składającą się z:
 
 ## 3. Backend
 ### 3.1 Framework
-- **Node.js + NestJS**
-  - modularna architektura (moduły, kontrolery, serwisy),
-  - łatwa rozbudowa i utrzymanie,
-  - dobre wsparcie dla dokumentacji API.
+- **Python FastAPI**
+  - automatyczna dokumentacja,
+  - wykorzystanie Pydantic do walidacji danych,
+  - pełne wsparcie dla async/await.
 
 ### 3.2 Baza danych i warstwa danych
-- **PostgreSQL**
+- **MySQL**
   - relacyjny model danych (wydarzenia, zapisy, konta).
 - **ORM (np. TypeORM)**
   - mapowanie encji na tabele,
   - wygodne zarządzanie relacjami oraz migracjami.
 
 ### 3.3 Dokumentacja API
-- **Swagger**
+- **FastAPI Built-in Swagger (OpenAPI)**
   - generowanie dokumentacji endpointów,
-  - ułatwienie integracji frontend–backend.
+  - ułatwienie integracji frontend–backend
+  - Wbudowany interfejs pod adresem /docs (Swagger UI).
 
 ### 3.4 Integracja e-mail
 - **Zewnętrzny serwis pocztowy (SMTP/API)**
@@ -51,10 +52,10 @@ System LSWIS jest aplikacją webową składającą się z:
 
 ## 4. Frontend
 ### 4.1 Framework
-- **Angular**
-  - SPA z routingiem i komponentami,
-  - formularze i walidacje po stronie klienta,
-  - modularność (feature modules).
+- **React**
+  - Architektura oparta na komponentach funkcjonalnych i hookach,
+  - formularze i walidacja,
+  - Zarządzanie stanem.
 
 ### 4.2 UI/UX
 - **Figma**
