@@ -1,14 +1,22 @@
-fastapi
-uvicorn[standard]
-pydantic[email]
-pydantic
-pydantic-settings
-python-dotenv
-sqlalchemy
-pymysql
-cryptography
-passlib[bcrypt]
-pyjwt
-python-jose
-bcrypt==4.0.1
-python-multipart
+# --- API framework & HTTP server ---
+fastapi              # REST API, routing, OpenAPI (/docs)
+uvicorn[standard]    # ASGI server (local & Docker)
+python-multipart     # OAuth2 login form (username/password fields)
+
+# --- Request/response validation & env config ---
+pydantic[email]      # schemas; EmailStr fields
+pydantic-settings    # loads DB/JWT/SMTP from .env (import: pydantic_settings)
+email-validator      # required by Pydantic for email format checks
+
+# --- MySQL + SQLAlchemy ORM ---
+sqlalchemy           # models, sessions, queries
+pymysql              # MySQL driver (connection URL mysql+pymysql://...)
+cryptography         # TLS/crypto deps for pymysql & python-jose
+
+# --- Passwords & JWT ---
+passlib[bcrypt]      # hash_password / verify_password
+bcrypt==4.0.1        # pinned for passlib compatibility
+python-jose[cryptography]  # JWT encode/decode (utils/auth, dependencies)
+
+# --- Environment file ---
+python-dotenv        # optional; pydantic-settings also reads .env
