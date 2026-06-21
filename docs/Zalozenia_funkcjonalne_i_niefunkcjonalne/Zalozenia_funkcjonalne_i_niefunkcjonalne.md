@@ -20,7 +20,6 @@
 - Wolontariusz może zapisać się na wydarzenie.
 - Wolontariusz może anulować zapis na wydarzenie.
 - Organizator wydarzenia może przeglądać listę zapisanych wolontariuszy.
-- System blokuje rekrutację po osiągnięciu limitu miejsc.
 - ❌ **[ODRZUCONE PRZEZ BIZNES]** ~~System umożliwia tworzenie listy rezerwowej po przekroczeniu limitu miejsc.~~
 - ❌ **[ODRZUCONE PRZEZ BIZNES]** ~~System umożliwia automatyczne przypisywanie wolontariuszy do wydarzeń na podstawie kompetencji.~~
 
@@ -92,12 +91,9 @@
 ## Założenia niefunkcjonalne
 
 ### 13. Bezpieczeństwo
-- Hasła przechowywane są w formie zahaszowanej (bcrypt).
 - Wymagana jest ponowna autoryzacja po okresie nieaktywności (sesja wygasa).
 - Panel administracyjny jest dostępny wyłącznie dla roli `ADMIN`.
 - Komunikacja API odbywa się wyłącznie przez HTTPS.
-- Ochrona przed SQL Injection jest zapewniona poprzez ORM (TypeORM).
-- System posiada limit prób logowania (ochrona przed brute-force).
 - ❌ **[ODRZUCONE PRZEZ BIZNES]** ~~Uwierzytelnianie wieloskładnikowe (2FA) dla kont administracyjnych.~~
 
 ---

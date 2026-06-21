@@ -71,9 +71,6 @@ Administrator podejmuje decyzję o zatwierdzeniu lub odrzuceniu konta organizacj
 - Administrator może zatwierdzić konto (organizacja uzyskuje dostęp do funkcji organizatora).
 - Administrator może odrzucić zgłoszenie (organizacja nie uzyskuje dostępu).
 
-### 4.3 Komunikaty
-- „Konto organizacji zostało zatwierdzone”
-- „Zgłoszenie organizacji zostało odrzucone”
 
 ---
 
@@ -95,7 +92,6 @@ Po poprawnym logowaniu użytkownik zostaje przekierowany do panelu zależnego od
 ### 5.4 Komunikaty i błędy
 - „Zalogowano pomyślnie”
 - „Nieprawidłowy e-mail lub hasło”
-- „Twoje konto jest zablokowane”
 - „Konto organizacji oczekuje na zatwierdzenie”
 
 ---
